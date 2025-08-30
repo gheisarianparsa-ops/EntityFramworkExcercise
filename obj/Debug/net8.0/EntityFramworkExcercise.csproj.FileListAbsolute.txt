@@ -276,3 +276,10 @@ C:\Users\parsa\source\repos\EntityFramworkExcercise\EntityFramworkExcercise\bin\
 C:\Users\parsa\source\repos\EntityFramworkExcercise\EntityFramworkExcercise\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.Scripting.resources.dll
 C:\Users\parsa\source\repos\EntityFramworkExcercise\EntityFramworkExcercise\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.Scripting.resources.dll
 C:\Users\parsa\source\repos\EntityFramworkExcercise\EntityFramworkExcercise\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.Scripting.resources.dll
+C:\Users\parsa\source\repos\EntityFramworkExcercise\EntityFramworkExcercise\obj\Debug\net8.0\EntityFramworkExcercise.sourcelink.json
+C:\Users\parsa\source\repos\EntityFramworkExcercise\EntityFramworkExcercise\bin\Debug\net8.0\clean-vs-code\.eslintrc.json
+C:\Users\parsa\source\repos\EntityFramworkExcercise\EntityFramworkExcercise\bin\Debug\net8.0\clean-vs-code\language-configuration.json
+C:\Users\parsa\source\repos\EntityFramworkExcercise\EntityFramworkExcercise\bin\Debug\net8.0\clean-vs-code\package-lock.json
+C:\Users\parsa\source\repos\EntityFramworkExcercise\EntityFramworkExcercise\bin\Debug\net8.0\clean-vs-code\package.json
+C:\Users\parsa\source\repos\EntityFramworkExcercise\EntityFramworkExcercise\bin\Debug\net8.0\clean-vs-code\syntaxes\clean.tmLanguage.json
+C:\Users\parsa\source\repos\EntityFramworkExcercise\EntityFramworkExcercise\bin\Debug\net8.0\clean-vs-code\tsconfig.json

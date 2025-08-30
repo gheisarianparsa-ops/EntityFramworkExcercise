@@ -1,39 +1,42 @@
-using EntityFramworkExcercise.Data;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.DependencyInjection;
+using EntityFramworkExcercise.Data;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
-// idk (important to use)
+// 1️⃣ Connection string
+var conn = builder.Configuration.GetConnectionString("SchoolManagmentDbContext");
 
-var conn = builder.Configuration.GetConnectionString("SchoolManagmentDbConnectionString");
+// 2️⃣ DbContext
+builder.Services.AddDbContext<SchoolManagmentDbContext>(options =>
+    options.UseSqlServer(conn, sqlOptions =>
+        sqlOptions.EnableRetryOnFailure()
+    )
+);
 
-builder.Services.AddDbContext<SchoolManagmentDbContext>(q=> q.UseSqlServer(conn));
+// 3️⃣ Controllers + Views
+builder.Services.AddControllersWithViews(); // ⚡ مهم
 
-builder.Services.AddControllersWithViews();
-
-//
+// 4️⃣ Authorization
+builder.Services.AddAuthorization();
 
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
+// Middleware
 if (!app.Environment.IsDevelopment())
 {
     app.UseExceptionHandler("/Home/Error");
-    // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
     app.UseHsts();
 }
 
 app.UseHttpsRedirection();
 app.UseStaticFiles();
-
 app.UseRouting();
+app.UseAuthorization(); // بعد از Routing
 
-app.UseAuthorization();
-
+// Map default controller route
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=Home}/{action=Index}/{id?}");
+    pattern: "{controller=Home}/{action=Index}/{id?}"
+);
 
 app.Run();
